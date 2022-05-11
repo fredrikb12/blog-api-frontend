@@ -5,7 +5,9 @@ function RouteSwitch() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<App />}></Route>
+        <Route path="/" element={<App />}>
+          <Route index element={<h1>Homepage?</h1>} />
+        </Route>
       </Routes>
     </HashRouter>
   );
