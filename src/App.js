@@ -29,9 +29,7 @@ function App() {
           <StyledLink to="/about">About</StyledLink>
         </StyledNav>
       </header>
-      <StyledHomepage>
-        <Outlet context={[posts]} />
-      </StyledHomepage>
+      <Outlet context={[posts]} />
     </>
   );
 }
