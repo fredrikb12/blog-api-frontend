@@ -1,4 +1,5 @@
-import { useOutletContext } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
+import { StyledArticle } from "../styled/Article.styled";
 import { StyledHomepage } from "../styled/Homepage.styled";
 
 function Homepage() {
@@ -7,10 +8,14 @@ function Homepage() {
     <StyledHomepage>
       {posts.map((post) => {
         return (
-          <article key={post._id}>
-            <h1>{post.title}</h1>
-            <p>{post.text}</p>
-          </article>
+          <StyledArticle key={post._id}>
+            <h1>
+              <Link to={`/posts/${post._id}`}>{post.title}</Link>
+            </h1>
+            <p>
+              {post.text.length > 70 ? post.text.slice(0, 70) + "..." : post.text}
+            </p>
+          </StyledArticle>
         );
       })}
     </StyledHomepage>
