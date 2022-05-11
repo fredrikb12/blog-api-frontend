@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import ActiveLink from "../components/ActiveLink";
 import styled from "styled-components";
 
