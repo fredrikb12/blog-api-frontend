@@ -6,7 +6,7 @@ import { StyledLink } from "./styled/Link.styled";
 import { StyledNav } from "./styled/Nav.styled";
 
 function App() {
-  const [info, setInfo] = useState([]);
+  const [posts, setPosts] = useState([]);
   useEffect(() => {
     async function fetchTest() {
       fetch("https://guarded-mesa-79248.herokuapp.com/posts", {
@@ -15,7 +15,7 @@ function App() {
         mode: "cors",
       })
         .then((response) => response.json())
-        .then((data) => console.log(data));
+        .then((data) => setPosts(() => data));
     }
     fetchTest();
   }, []);
@@ -30,7 +30,7 @@ function App() {
         </StyledNav>
       </header>
       <StyledHomepage>
-        <Outlet />
+        <Outlet context={[posts]} />
       </StyledHomepage>
     </>
   );
