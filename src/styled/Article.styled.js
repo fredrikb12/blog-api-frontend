@@ -9,10 +9,18 @@ export const StyledArticle = styled.article`
   padding: 10px 20px;
   text-align: center;
   max-width: clamp(250px, 80vw, 500px);
+  color: ${({ theme }) => theme.clr.lightShade};
+
   &:nth-child(odd) {
-    border-color: #76a297;
+    border-color: ${({ theme }) => theme.clr.lightAccent};
+    a {
+      color: ${({ theme }) => theme.clr.lightShade};
+    }
   }
   &:nth-child(even) {
-    border-color: #2b1820;
+    border-color: ${({ theme }) => theme.clr.darkAccent};
+    a {
+      color: ${({ theme }) => theme.clr.lightShade};
+    }
   }
 `;
