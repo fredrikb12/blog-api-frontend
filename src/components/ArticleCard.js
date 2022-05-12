@@ -1,14 +1,16 @@
 import { StyledArticle } from "../styled/Article.styled";
-import { StyledLink } from "../styled/Link.styled";
+import { NeutralLink, StyledLink } from "../styled/Link.styled";
 import ArticleCardText from "./ArticleCardtext";
 import ArticleCardHeader from "./ArticleCardHeader";
 
-function ArticleCard({ post }) {
+function ArticleCard({ post, onClick }) {
   return (
-    <StyledArticle key={post._id}>
-      <ArticleCardHeader text={post.title} to={`/posts/${post._id}`} />
-      <ArticleCardText text={post.text} />
-    </StyledArticle>
+    <NeutralLink to={`/posts/${post._id}`}>
+      <StyledArticle onClick={onClick} key={post._id}>
+        <ArticleCardHeader text={post.title} to={`/posts/${post._id}`} />
+        <ArticleCardText text={post.text} />
+      </StyledArticle>
+    </NeutralLink>
   );
 }
 
