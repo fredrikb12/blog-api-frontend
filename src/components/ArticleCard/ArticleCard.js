@@ -1,6 +1,6 @@
-import { StyledArticle } from "../styled/Article.styled";
-import { NeutralLink, StyledLink } from "../styled/Link.styled";
-import ArticleCardText from "./ArticleCardtext";
+import { StyledArticle } from "../../styled/Article.styled";
+import { NeutralLink, StyledLink } from "../../styled/Link.styled";
+import ArticleCardText from "./ArticleCardText";
 import ArticleCardHeader from "./ArticleCardHeader";
 
 function ArticleCard({ post, onClick }) {

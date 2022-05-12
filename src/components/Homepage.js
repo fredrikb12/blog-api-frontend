@@ -2,7 +2,7 @@ import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { StyledArticle } from "../styled/Article.styled";
 import { StyledHomepage } from "../styled/Homepage.styled";
 import { StyledLink } from "../styled/Link.styled";
-import ArticleCard from "./ArticleCard";
+import ArticleCard from "./ArticleCard/ArticleCard";
 
 function Homepage() {
   const [posts] = useOutletContext();
