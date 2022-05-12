@@ -1,7 +1,7 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 import App from "../App";
-import About from "./About";
-import Archive from "./Archive";
+import About from "./About/About";
+import Archive from "./Archive/Archive";
 import Homepage from "./Homepage";
 
 function RouteSwitch() {

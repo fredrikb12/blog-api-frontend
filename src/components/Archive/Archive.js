@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router-dom";
-import { StyledArchive } from "../styled/Archive.styled";
+import { StyledArchive } from "../../styled/Archive.styled";
 import ArchiveArticle from "./ArchiveArticle";
 
 function Archive() {

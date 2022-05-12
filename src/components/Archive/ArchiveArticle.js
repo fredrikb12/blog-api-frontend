@@ -1,4 +1,4 @@
-import { StyledLink } from "../styled/Link.styled";
+import { StyledLink } from "../../styled/Link.styled";
 
 function ArchiveArticle({ post }) {
   return (
