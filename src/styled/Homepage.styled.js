@@ -4,6 +4,6 @@ export const StyledHomepage = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
   padding: 10px;
 `

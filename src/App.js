@@ -13,9 +13,14 @@ function App() {
     clr: {
       main: "#1c121b",
       lightAccent: "#808C83",
-      darkAccent: "#70729E",
+      lightShadow: "#3F4741",
+      lightAccentHover: "#A1EDB3",
+      darkAccent: "#302C5C",
       lightShade: "#D8CFB2",
-      darkShade: "#512751",
+      darkShade: "#360B36",
+      darkShadeHover: "#590C59",
+      purpleBorder: "#700070",
+      blueBorder: "#405E8A",
     },
   };
 

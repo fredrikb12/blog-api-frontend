@@ -10,17 +10,26 @@ export const StyledArticle = styled.article`
   text-align: center;
   max-width: clamp(250px, 80vw, 500px);
   color: ${({ theme }) => theme.clr.lightShade};
+  background-color: ${({ theme }) => theme.clr.darkShade};
 
-  &:nth-child(odd) {
+
+  a:nth-child(odd) > & {
     border-color: ${({ theme }) => theme.clr.lightAccent};
-    a {
-      color: ${({ theme }) => theme.clr.lightShade};
-    }
+    box-shadow: 4px 6px 8px 2px ${({ theme }) => theme.clr.darkAccent};
   }
-  &:nth-child(even) {
-    border-color: ${({ theme }) => theme.clr.darkAccent};
-    a {
-      color: ${({ theme }) => theme.clr.lightShade};
-    }
+  a:nth-child(even) > & {
+    border-color: ${({ theme }) => theme.clr.blueBorder};
+    box-shadow: 4px 6px 8px 2px ${({ theme }) => theme.clr.lightShadow};
+    
+  }
+
+  a:nth-child(odd) > &:hover {
+    background-color: ${({ theme }) => theme.clr.darkShadeHover};
+    color: ${({ theme }) => theme.clr.lightAccentHover};
+  }
+
+  a:nth-child(even) > &:hover {
+    background-color: ${({ theme }) => theme.clr.darkShadeHover};
+    color: ${({ theme }) => theme.clr.lightAccentHover};
   }
 `;
