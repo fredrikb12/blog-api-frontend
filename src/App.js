@@ -21,6 +21,8 @@ function App() {
       darkShadeHover: "#590C59",
       purpleBorder: "#700070",
       blueBorder: "#405E8A",
+      brightAccentShadow: "#D33B53",
+      lightAccentShadow: "#7B888B",
     },
   };
 
