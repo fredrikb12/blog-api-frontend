@@ -5,6 +5,8 @@ import { StyledHomepage } from "./styled/Homepage.styled";
 import { StyledLink } from "./styled/Link.styled";
 import { StyledNav } from "./styled/Nav.styled";
 import { ThemeProvider } from "styled-components";
+import Header from "./components/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -42,14 +44,9 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <header>
-          <StyledNav>
-            <StyledLink to="/">Home</StyledLink>
-            <StyledLink to="/archive">Archive</StyledLink>
-            <StyledLink to="/about">About</StyledLink>
-          </StyledNav>
-        </header>
+        <Header />
         <Outlet context={[posts]} />
+        <Footer/>
       </ThemeProvider>
     </>
   );

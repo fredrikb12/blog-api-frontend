@@ -7,6 +7,6 @@ export const StyledArchive = styled.main`
   align-items: center;
   padding: 30px;
   hr {
-    width: clamp(250px, 60%, 1500px);
+    width: clamp(220px, 60%, 1500px);
   }
 `
