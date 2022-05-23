@@ -8,7 +8,7 @@ function FooterIcons() {
           alignItems: "center",
         }}
       >
-        <p style={{ color: "#000" }}>Client</p>
+        <p style={{ color: "#000" }}>Server</p>
         <a href="https://github.com/fredrikb12/blog-api">
           <svg viewBox="0 0 128 128">
             <g fill="#000">
@@ -29,7 +29,7 @@ function FooterIcons() {
           alignItems: "center",
         }}
       >
-        <p style={{ color: "#000" }}>Server</p>
+        <p style={{ color: "#000" }}>Client</p>
         <a href="https://github.com/fredrikb12/blog-api-frontend">
           <svg viewBox="0 0 128 128">
             <g fill="#000">
