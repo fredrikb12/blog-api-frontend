@@ -28,20 +28,23 @@ function Post() {
     fetchPost();
   }, [postId]);
 
-  /*useEffect(() => {
-    async function fetchTest() {
-      fetch("https://guarded-mesa-79248.herokuapp.com/posts", {
-        credentials: "include",
-        method: "GET",
-        mode: "cors",
-      })
-        .then((response) => response.json())
-        .then((data) => setPosts(() => data));
-    }
-    fetchTest();
-  }, []);*/
+  if (post === null) {
+    return <h1>Loading...</h1>;
+  } else {
+    return (
+      <div>
+        <h1>{post.title}</h1>
 
-  return <div>Post</div>;
+        <div>
+          <p>
+            {post.author.first_name} {post.author.last_name} -{" "}
+            {new Date(post.createdAt).toLocaleDateString()}
+          </p>
+        </div>
+        <p>{post.text}</p>
+      </div>
+    );
+  }
 }
 
 export default Post;
