@@ -3,6 +3,7 @@ import App from "../App";
 import About from "./About/About";
 import Archive from "./Archive/Archive";
 import Homepage from "./Homepage";
+import Post from "./Post";
 
 function RouteSwitch() {
   return (
@@ -11,7 +12,8 @@ function RouteSwitch() {
         <Route path="/" element={<App />}>
           <Route index element={<Homepage />} />
           <Route path="/archive" element={<Archive />} />
-          <Route path="/about" element={<About/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/posts/:postId" element={<Post />} />
         </Route>
       </Routes>
     </HashRouter>
